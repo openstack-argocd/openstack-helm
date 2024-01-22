@@ -29,6 +29,7 @@ metadata:
 {{ tuple $envAll "keystone" "domain-manage" | include "helm-toolkit.snippets.kubernetes_metadata_labels" | indent 4 }}
   annotations:
     "helm.sh/hook": post-install,post-upgrade
+    argocd.argoproj.io/hook: PostSync
     "helm.sh/hook-delete-policy": before-hook-creation
 spec:
   template:
