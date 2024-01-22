@@ -14,7 +14,7 @@ limitations under the License.
 
 {{- define "metadata.annotations.job.db_sync" }}
 {{- if .Values.helm3_hook -}}
-argocd.argoproj.io/hook: PostSync
+argocd.argoproj.io/hook: Sync
 helm.sh/hook-weight: "-4"
 {{- end -}}
 {{- end }}
